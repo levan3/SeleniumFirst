@@ -27,12 +27,23 @@ namespace SeleniumFirst
 
         public EAPageObject Login(string userName, string password)
         {
+
+            //Custom EnterText Method
             //Login
-            txtUserName.SendKeys(userName);
+            txtUserName.EnterText(userName);
             //Pw
-            txtPassword.SendKeys(password);
+            txtPassword.EnterText(userName);
             //Click
-            btnLogin.Submit();
+            btnLogin.Clicks();
+
+            ////Login
+            //txtUserName.SendKeys(userName);
+            ////Pw
+            //txtPassword.SendKeys(password);
+            ////Click
+            //btnLogin.Submit();
+
+
 
             return new EAPageObject();
         }

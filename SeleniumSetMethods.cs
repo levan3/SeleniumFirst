@@ -6,24 +6,25 @@ using SeleniumFirst;
 
 namespace SeleniumFirst
 {
-    public class SeleniumSetMethods 
+    public static class SeleniumSetMethods 
     {
         //Enter Text
-        public static void EnterText(IWebElement element, String value)
+        //Extended method for entering text in the control
+        public static void EnterText(this IWebElement element, String value)
         {
             element.SendKeys(value);
 
         }
 
         //Click into a button, checkbox, option etc
-        public static void Click(IWebElement element)
+        public static void Clicks(this IWebElement element)
 
         {
             element.Click();
         }
 
         //Selecting a drop down control
-        public static void SelectDropDown(IWebElement element, String value)
+        public static void SelectDropDown(this IWebElement element, String value)
         {
 
             new SelectElement(element).SelectByText(value);
