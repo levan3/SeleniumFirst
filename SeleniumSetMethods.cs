@@ -11,7 +11,7 @@ namespace SeleniumFirst
         //Enter Text
         public static void EnterText(String element, String value,PropertyType elementtype)
         {
-            if(elementtype == PropertyType.Id)
+            if(elementtype == PropertyType.Id) 
            PropertiesCollection.driver.FindElement(By.Id(element)).SendKeys(value);
 
             if (elementtype == PropertyType.Name)
