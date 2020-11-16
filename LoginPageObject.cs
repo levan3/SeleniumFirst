@@ -34,7 +34,7 @@ namespace SeleniumFirst
             //Pw
             txtPassword.EnterText(userName);
             //Click
-            btnLogin.Clicks();
+            btnLogin.Submit();
 
             ////Login
             //txtUserName.SendKeys(userName);

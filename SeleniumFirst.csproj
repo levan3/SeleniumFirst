@@ -72,6 +72,14 @@
     <Reference Include="WebDriver.Support">
       <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -81,6 +89,7 @@
     <Compile Include="PropertiesCollection.cs" />
     <Compile Include="EAPageObject.cs" />
     <Compile Include="LoginPageObject.cs" />
+    <Compile Include="ExcelLib.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

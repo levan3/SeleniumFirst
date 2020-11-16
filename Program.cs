@@ -30,20 +30,24 @@ namespace SeleniumFirst
         [Test]
         public void ExecuteTest()
         {
+            ExcelLib.PopulateInCollection(@"/Users/vanle/Desktop/data.xlsx");
 
             //Login to Application
             LoginPageObject pageLogin = new LoginPageObject();
-            EAPageObject pageEA = pageLogin.Login("execute", "automation");
-            pageEA.FillUserForm("KK", "Karthik","Automation");
+            EAPageObject pageEA = pageLogin.Login(ExcelLib.ReadData(1,"UserName"),
+                ExcelLib.ReadData(1, "Password"));
+            pageEA.FillUserForm(ExcelLib.ReadData(1,"Initial"),
+                ExcelLib.ReadData(1,"MiddleName"),
+                ExcelLib.ReadData(1, "FirstName"));
 
 
-            //Initialized the page by calling reference
-            EAPageObject page = new EAPageObject();
+            //Initialized the page by calling references
+            //EAPageObject page = new EAPageObject();
 
-            page.txtInitial.SendKeys("executeautomation");
-            page.btnSave.Click();
+            //page.txtInitial.SendKeys("executeautomation");
+            //page.btnSave.Click();
 
-
+             
 
             ////Title
             //SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", PropertyType.Id);
